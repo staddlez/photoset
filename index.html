@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christian's Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 2rem;
+    }
+
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .schedule, .code-input {
+      flex: 1 1 300px;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .code-input label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .code-input input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .code-input button {
+      background: #111;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .media-gallery img,
+    .media-gallery video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Christian's Photography
+  </header>
+
+  <section class="section">
+    <div class="two-column">
+      <div class="schedule">
+        <h2>Upcoming Schedule</h2>
+        <ul>
+          <li>June 5 - Wedding in NYC</li>
+          <li>June 10 - Portraits in LA</li>
+          <li>June 15 - Nature Shoot in Colorado</li>
+        </ul>
+      </div>
+      <div class="code-input">
+        <label for="photoshootCode">Photoshoot Code</label>
+        <input type="text" id="photoshootCode" placeholder="Enter code..." />
+        <button onclick="submitCode()">Submit</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align:center; margin-bottom: 1.5rem;">Featured Work</h2>
+    <div class="media-gallery">
+      <img src="https://via.placeholder.com/600x400" alt="Sample Photo 1" />
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <img src="https://via.placeholder.com/600x400" alt="Sample Photo 2" />
+    </div>
+  </section>
+
+  <script>
+    function submitCode() {
+      const code = document.getElementById('photoshootCode').value;
+      alert('Submitted code: ' + code); // Replace with actual backend hook later
+    }
+  </script>
+
+</body>
+</html>
