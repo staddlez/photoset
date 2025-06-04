@@ -4,27 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christian's Photography</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #111;
+      --accent-color: #555;
+      --bg-color: #f9f9f9;
+      --font-main: 'Poppins', sans-serif;
+      --font-title: 'Playfair Display', serif;
+    }
+
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      font-family: var(--font-main);
+      background-color: var(--bg-color);
+      color: var(--primary-color);
       line-height: 1.6;
     }
 
     header {
-      background: #111;
+      background: var(--primary-color);
       color: #fff;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
-      font-size: 2rem;
-      font-weight: 600;
+    }
+
+    header h1 {
+      font-family: var(--font-title);
+      font-size: 2.5rem;
+      margin: 0;
     }
 
     .section {
-      padding: 2rem;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .two-column {
@@ -38,14 +52,22 @@
       flex: 1 1 300px;
       background: #fff;
       padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    .code-input label {
-      display: block;
+    .schedule h2, .code-input label {
+      font-family: var(--font-title);
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .schedule ul {
+      padding-left: 1.25rem;
+    }
+
+    .schedule li {
       margin-bottom: 0.5rem;
-      font-weight: 600;
     }
 
     .code-input input {
@@ -58,7 +80,7 @@
     }
 
     .code-input button {
-      background: #111;
+      background: var(--primary-color);
       color: #fff;
       padding: 0.75rem 1.5rem;
       border: none;
@@ -78,63 +100,9 @@
     .media-gallery video {
       width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    @media (max-width: 600px) {
-      header {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    Christian's Photography
-  </header>
-
-  <section class="section">
-    <div class="two-column">
-      <div class="schedule">
-        <h2>Upcoming Schedule</h2>
-        <ul>
-          <li>June 13–15 – Salt Lake City, Utah</li>
-          <li>July 1–13 – Seattle, Washington</li>
-          <li>July 15–24 – Croatia</li>
-          <li>July 24–28 – Belgium</li>
-          <li>August 15–20 – London, UK</li>
-          <li>August 20–30 – Northern Ireland & Ireland</li>
-        </ul>
-      </div>
-      <div class="code-input">
-        <label for="photoshootCode">Photoshoot Code</label>
-        <input type="text" id="photoshootCode" placeholder="Enter code..." />
-        <button onclick="submitCode()">Submit</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 style="text-align:center; margin-bottom: 1.5rem;">Featured Work</h2>
-    <div class="media-gallery">
-      <video controls>
-        <source src="1.mp4" type="video/quicktime">
-        Your browser does not support .mp4 video.
-      </video>
-      <video controls>
-        <source src="2.mp4" type="video/mp4">
-        Your browser does not support .mp4 video.
-      </video>
-      <img src="3.jpg" alt="Featured Image" />
-    </div>
-  </section>
-
-  <script>
-    function submitCode() {
-      alert('Invalid code');
-    }
-  </script>
-
-</body>
-</html>
+    .section-title {
+      text-ali
