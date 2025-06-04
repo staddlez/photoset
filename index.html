@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christian's Photography</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
   <style>
     :root {
       --primary-color: #111;
-      --accent-color: #555;
       --bg-color: #f9f9f9;
       --font-main: 'Poppins', sans-serif;
       --font-title: 'Playfair Display', serif;
@@ -19,7 +19,6 @@
       font-family: var(--font-main);
       background-color: var(--bg-color);
       color: var(--primary-color);
-      line-height: 1.6;
     }
 
     header {
@@ -71,38 +70,3 @@
     }
 
     .code-input input {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .code-input button {
-      background: var(--primary-color);
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: 600;
-      width: 100%;
-    }
-
-    .media-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-
-    .media-gallery img,
-    .media-gallery video {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .section-title {
-      text-ali
